@@ -52,9 +52,4 @@ export class MessageResolver {
 
     return result;
   }
-
-  @Query(() => String)
-  async testing() {
-    return "aa";
-  }
 }
