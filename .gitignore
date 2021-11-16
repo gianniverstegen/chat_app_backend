@@ -1,0 +1,10 @@
+# converted files
+/dist
+
+# modules
+/node_modules
+
+*.lock
+.env
+
+tsconfig.json
