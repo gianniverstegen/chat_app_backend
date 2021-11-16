@@ -4,9 +4,11 @@
 
 - TypeScript
 - Node.js
+- TypeORM
 - GraphQL
 - Redis
 - Postgres
+- Argon2
 
 ## Main functionality:
 
