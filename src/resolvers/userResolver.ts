@@ -12,7 +12,6 @@ import { UserRegistrationLoginResult } from "../utils/types/userResolverTypes";
 import argon2 from "argon2";
 import { MyContext } from "../utils/types/contextTypes";
 import { isAuthenticated } from "../utils/middleware/isAuth";
-// import { makeid } from "../utils/functions/randomUsernameGen";
 
 declare module "express-session" {
   interface Session {

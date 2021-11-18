@@ -6,6 +6,7 @@
 - Node.js
 - TypeORM
 - GraphQL
+- Apollo Server
 - Redis
 - Postgres
 - Argon2
