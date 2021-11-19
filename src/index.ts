@@ -2,7 +2,7 @@ import "dotenv/config";
 import connectRedis from "connect-redis";
 import express from "express";
 import session from "express-session";
-import redis from "redis";
+import Redis from "ioredis";
 import { buildSchema } from "type-graphql";
 import { ApolloServer } from "apollo-server-express";
 import { createConnection } from "typeorm";
@@ -15,17 +15,20 @@ import { MessageResolver } from "./resolvers/MessageResolver";
 
 const main = async () => {
   // Connect to database
-  await createConnection(typeormConfig);
+  const con = await createConnection(typeormConfig);
+  await con.runMigrations();
 
   // Create express app
   const app = express();
 
   // Create redis session store and client
   const RedisStore = connectRedis(session);
-  const redisClient = redis.createClient();
+  const redisClient = new Redis(process.env.REDIS_URL);
+
+  app.set("proxy", 1);
 
   // Add cors
-  app.use(cors({ origin: "http://localhost:3000", credentials: true }));
+  app.use(cors({ origin: process.env.CORS_ORIGIN, credentials: true }));
 
   // Implement express session
   app.use(
@@ -56,7 +59,7 @@ const main = async () => {
   // activate /graphql endpoint
   apolloServer.applyMiddleware({ app, cors: false });
 
-  app.listen(4000, () => {
+  app.listen(process.env.PORT, () => {
     console.log("Listening on port 4000");
   });
 };

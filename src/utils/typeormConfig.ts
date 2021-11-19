@@ -1,11 +1,11 @@
 import { Message } from "../entities/Message";
 import { User } from "../entities/User";
+import "dotenv/config";
 
 export const typeormConfig = {
   type: "postgres",
-  database: "babel_session",
-  username: "gianni",
+  url: process.env.DATABASE_URL,
   logging: true,
-  synchronize: true,
+  // synchronize: true, // Only in dev
   entities: [User, Message],
 } as any;

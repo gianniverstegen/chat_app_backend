@@ -3,8 +3,14 @@
 
 # modules
 /node_modules
-
 *.lock
-.env
 
+# prod stuff
+.env
+.env.production
+Dockerfile
+.dockerignore
+
+# configs specific to lang or dummy
 tsconfig.json
+ormconfig.json
