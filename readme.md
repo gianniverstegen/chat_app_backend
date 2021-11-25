@@ -36,5 +36,5 @@ The front end can be found [here](https://github.com/gianniverstegen/chat_app_we
   - CORS_ORIGIN is the website url at which the front end located, this allows the front end to send API requests to the back end. 
 - Run yarn to install the packages.
 - Add your tsconfig.
-- Run yarn watch.
-- Run yarn dev.
+- Run yarn build.
+- Run yarn start.
