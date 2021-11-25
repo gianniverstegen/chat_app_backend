@@ -1,4 +1,4 @@
-# Backend for my global chatroom app
+# Backend for a global chatroom app
 
 The front end can be found [here](https://github.com/gianniverstegen/chat_app_webserver).
 
