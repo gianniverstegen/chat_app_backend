@@ -24,3 +24,16 @@ The front end can be found [here](https://github.com/gianniverstegen/chat_app_we
 
 <img width="641" alt="er" src="https://user-images.githubusercontent.com/79252340/143247424-95150e17-c692-47bc-97ba-5c575bd8f176.png">
 
+## Setting up:
+
+- Make sure that the front end of this app is ready to go.
+- Change the .env.example to .env, and fill in the variables.
+  - SECRET is the secret used for user session.
+  - DATABASE_URL is, well, the url where the database is located (postgresql://{USERNAME}:{PASSWORD}@{IP}:{PORT}/{DATABASE_NAME}).
+  - REDIS_URL is where the redis database is located ({IP}:{PORT}).
+  - PORT is the port on which you host the back end.
+  - CORS_ORIGIN is the website url at which the front end located. 
+- Run yarn to install the packages.
+- Add your tsconfig.
+- Run yarn watch.
+- Run yarn dev.
