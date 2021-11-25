@@ -22,6 +22,7 @@ The front end can be found [here](https://github.com/gianniverstegen/chat_app_we
 
 ## ERD:
 The message table is in full participation in the user_message relation. The user_message relation is a one-to-many relation.
+The primary keys for the user and message tables are respectively userID and messageID.
 
 
 <img width="641" alt="er" src="https://user-images.githubusercontent.com/79252340/143247424-95150e17-c692-47bc-97ba-5c575bd8f176.png">
