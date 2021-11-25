@@ -27,6 +27,7 @@ The front end can be found [here](https://github.com/gianniverstegen/chat_app_we
 ## Setting up:
 
 - Make sure that the front end of this app is ready to go.
+- Set up redis and postgres databases.
 - Change the .env.example to .env, and fill in the variables.
   - SECRET is the secret used for user session.
   - DATABASE_URL is, well, the url where the database is located (postgresql://{USERNAME}:{PASSWORD}@{IP}:{PORT}/{DATABASE_NAME}).
