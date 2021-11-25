@@ -33,7 +33,7 @@ The front end can be found [here](https://github.com/gianniverstegen/chat_app_we
   - DATABASE_URL is, well, the url where the database is located (postgresql://{USERNAME}:{PASSWORD}@{IP}:{PORT}/{DATABASE_NAME}).
   - REDIS_URL is where the redis database is located ({IP}:{PORT}).
   - PORT is the port on which you host the back end.
-  - CORS_ORIGIN is the website url at which the front end located, this allows the front end to send API requests. 
+  - CORS_ORIGIN is the website url at which the front end located, this allows the front end to send API requests to the back end. 
 - Run yarn to install the packages.
 - Add your tsconfig.
 - Run yarn watch.
